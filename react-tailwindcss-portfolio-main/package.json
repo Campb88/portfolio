@@ -1,7 +1,8 @@
 {
-	"name": "react-tailwindcss-portfolio",
+	"name": "my-portfolio",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://campb88.github.io/portfolio/react-tailwindcss-portfolio-main/public/index.html",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^13.4.0",
@@ -19,6 +20,8 @@
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"start": "react-scripts --openssl-legacy-provider start",
 		"build": "yarn run react-scripts build",
 		"test": "react-scripts test",
