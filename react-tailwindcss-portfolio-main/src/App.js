@@ -6,6 +6,7 @@ import AppFooter from './components/shared/AppFooter';
 import AppHeader from './components/shared/AppHeader';
 import './css/App.css';
 import UseScrollToTop from './hooks/useScrollToTop';
+import background from "./images/blurry_skyline.jpg";
 
 const About = lazy(() => import('./pages/AboutMe'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
@@ -14,8 +15,12 @@ const Projects = lazy(() => import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 
 
+
 function App() {
+
 	return (
+
+		<div style={{ backgroundImage: `url(${background})` }}>
 		<AnimatePresence>
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
 				<Router>
@@ -39,6 +44,7 @@ function App() {
 				<UseScrollToTop />
 			</div>
 		</AnimatePresence>
+		</div>
 	);
 }
 

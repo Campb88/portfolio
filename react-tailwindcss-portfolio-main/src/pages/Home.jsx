@@ -4,14 +4,18 @@ import ProjectsGrid from '../components/projects/ProjectsGrid';
 import { ProjectsProvider } from '../context/ProjectsContext';
 import Button from '../components/reusable/Button';
 
+
 const Home = () => {
 	return (
-		<div className="container mx-auto">
+		<div className="container mx-auto h-full flex flex-col items-center">
+			<div className="mt-20 mb-20 sm:mt-20 mb-20">
 			<AppBanner></AppBanner>
-
+			</div>
+			<div className="mt-20 sm:mt-20">
 			<ProjectsProvider>
 				<ProjectsGrid></ProjectsGrid>
 			</ProjectsProvider>
+			</div>
 
 			<div className="mt-8 sm:mt-10 flex justify-center">
 				<Link
